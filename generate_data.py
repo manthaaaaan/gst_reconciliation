@@ -127,16 +127,6 @@ for i, inv in enumerate(invoices):
 
 random.shuffle(returns)
 
-while len(returns) < 55:
-    extra_inv = random.choice(invoices)
-    extra_inv_num = int(extra_inv["invoice_id"].replace("INV", ""))
-    if extra_inv_num not in mismatch_invoice_ids:
-        extra_row = extra_inv.copy()
-        extra_row["invoice_id"] = f"INV{str(random.randint(100, 999)).zfill(5)}"
-        returns.append(extra_row)
-
-returns = returns[:55]
-
 df_invoices = pd.DataFrame(invoices)
 df_returns = pd.DataFrame(returns)
 
