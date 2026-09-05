@@ -168,7 +168,7 @@
         "taxable_amount": "15000.0",
         "gst_rate": "18",
         "gst_amount": "2700.0",
-        "vendor_id": "V001"
+        "vendor_id": "V004"
       },
       "return_data": null
     },
@@ -673,7 +673,7 @@
         "taxable_amount": "15000.0",
         "gst_rate": "18",
         "gst_amount": "2700.0",
-        "vendor_id": "V010"
+        "vendor_id": "V0O4"
       }
     },
     {
