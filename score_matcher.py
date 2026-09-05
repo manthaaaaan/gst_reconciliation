@@ -26,6 +26,7 @@ GROUND_TRUTH_TO_REASON = {
     "gst_rate_error": ReasonCode.RATE_MISMATCH.value,
     "hsn_discrepancy": ReasonCode.HSN_MISMATCH.value,
     "duplicate_filing": ReasonCode.DUPLICATE_ENTRY.value,
+    "amount_mismatch": ReasonCode.AMOUNT_MISMATCH.value,
 }
 
 
@@ -68,65 +69,74 @@ def compute_confusion(expected_map: Dict[str, str], detected_map: Dict[str, str]
 
 def compute_metrics(confusion: Dict[str, Dict[str, int]]) -> Dict[str, Any]:
     codes = REASON_CODES
-    metrics = {}
+    metrics = {
+        "overall": {"accuracy": 0.0, "precision": 0.0, "recall": 0.0, "f1": 0.0},
+        "per_code": {}
+    }
+
+    total_correct = 0
+    total_samples = 0
+
+    precisions = []
+    recalls = []
+    f1s = []
 
     for code in codes:
-        tp = confusion.get(code, {}).get(code, 0)
-        fp = sum(confusion.get(other, {}).get(code, 0) for other in codes if other != code)
-        fn = sum(confusion.get(code, {}).get(other, 0) for other in codes if other != code)
+        tp = confusion[code][code]
+        fp = sum(confusion[c][code] for c in codes if c != code)
+        fn = sum(confusion[code][c] for c in codes if c != code)
+        total_samples += sum(confusion[code].values())
+        total_correct += tp
 
-        precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+        prec = (tp / (tp + fp) * 100.0) if (tp + fp) > 0 else 0.0
+        rec = (tp / (tp + fn) * 100.0) if (tp + fn) > 0 else 0.0
+        f1 = (2 * prec * rec / (prec + rec)) if (prec + rec) > 0 else 0.0
 
-        expected_total = sum(confusion.get(code, {}).values())
-        detected_total = sum(confusion.get(other, {}).get(code, 0) for other in codes)
+        expected_count = sum(confusion[code].values())
+        detected_count = sum(confusion[c][code] for c in codes)
 
-        metrics[code] = {
-            "expected": expected_total,
-            "detected": detected_total,
+        if expected_count > 0:
+            precisions.append(prec)
+            recalls.append(rec)
+            f1s.append(f1)
+
+        metrics["per_code"][code] = {
+            "expected": expected_count,
+            "detected": detected_count,
             "tp": tp,
             "fp": fp,
             "fn": fn,
-            "precision": round(precision * 100, 2),
-            "recall": round(recall * 100, 2),
-            "f1": round(f1 * 100, 2),
+            "precision": round(prec, 2),
+            "recall": round(rec, 2),
+            "f1": round(f1, 2)
         }
 
-    total_tp = sum(m["tp"] for m in metrics.values())
-    total_fp = sum(m["fp"] for m in metrics.values())
-    total_fn = sum(m["fn"] for m in metrics.values())
+    macro_prec = sum(precisions) / len(precisions) if precisions else 0.0
+    macro_rec = sum(recalls) / len(recalls) if recalls else 0.0
+    macro_f1 = sum(f1s) / len(f1s) if f1s else 0.0
+    acc = (total_correct / total_samples * 100.0) if total_samples > 0 else 0.0
 
-    overall_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0.0
-    overall_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0.0
-    overall_f1 = 2 * overall_precision * overall_recall / (overall_precision + overall_recall) if (overall_precision + overall_recall) > 0 else 0.0
-
-    total_entries = sum(sum(v.values()) for v in confusion.values())
-    accuracy = total_tp / total_entries if total_entries > 0 else 0.0
-
-    return {
-        "overall": {
-            "accuracy": round(accuracy * 100, 2),
-            "precision": round(overall_precision * 100, 2),
-            "recall": round(overall_recall * 100, 2),
-            "f1": round(overall_f1 * 100, 2),
-        },
-        "per_code": metrics,
+    metrics["overall"] = {
+        "accuracy": round(acc, 2),
+        "precision": round(macro_prec, 2),
+        "recall": round(macro_rec, 2),
+        "f1": round(macro_f1, 2)
     }
 
+    return metrics
 
-def print_table(metrics: Dict[str, Any], confusion: Dict[str, Dict[str, int]]):
+
+def print_table(metrics: Dict[str, Any], confusion: Dict[str, Dict[str, int]], title: str = "GROUND TRUTH SCORING & BENCHMARK REPORT"):
     print("\n" + "=" * 95)
-    print("GROUND TRUTH SCORING & BENCHMARK REPORT")
+    print(title)
     print("=" * 95)
-
     print("\nOverall Metrics:")
     print(f"  Accuracy : {metrics['overall']['accuracy']:.2f}%")
     print(f"  Precision: {metrics['overall']['precision']:.2f}%")
     print(f"  Recall   : {metrics['overall']['recall']:.2f}%")
     print(f"  F1-Score : {metrics['overall']['f1']:.2f}%")
-
     print("\n" + "-" * 95)
+
     header = f"{'Reason Code':<24} | {'Expected':>8} | {'Detected':>8} | {'Precision':>10} | {'Recall':>10} | {'F1-Score':>10}"
     print(header)
     print("-" * 95)
@@ -160,12 +170,23 @@ def print_table(metrics: Dict[str, Any], confusion: Dict[str, Dict[str, int]]):
 
 
 def main():
-    if not os.path.exists("ground_truth.json") or not os.path.exists("results.json"):
-        print("Error: ground_truth.json or results.json not found.")
+    if "--edge-cases" in sys.argv:
+        gt_path = "edge_cases_ground_truth.json"
+        res_path = "edge_cases_results.json"
+        report_path = "edge_cases_scoring_report.json"
+        title = "ADVERSARIAL EDGE-CASE BENCHMARK REPORT"
+    else:
+        gt_path = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "ground_truth.json"
+        res_path = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else "results.json"
+        report_path = sys.argv[3] if len(sys.argv) > 3 and not sys.argv[3].startswith("--") else "scoring_report.json"
+        title = "GROUND TRUTH SCORING & BENCHMARK REPORT"
+
+    if not os.path.exists(gt_path) or not os.path.exists(res_path):
+        print(f"Error: {gt_path} or {res_path} not found.")
         return
 
-    gt = load_json("ground_truth.json")
-    res = load_json("results.json")
+    gt = load_json(gt_path)
+    res = load_json(res_path)
 
     expected_map = map_ground_truth(gt)
     detected_map = map_results(res)
@@ -173,12 +194,12 @@ def main():
     confusion = compute_confusion(expected_map, detected_map)
     metrics = compute_metrics(confusion)
 
-    print_table(metrics, confusion)
+    print_table(metrics, confusion, title=title)
 
-    with open("scoring_report.json", "w", encoding="utf-8") as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
-    print("\nDetailed report saved to scoring_report.json")
+    print(f"\nDetailed report saved to {report_path}")
 
 
 if __name__ == "__main__":

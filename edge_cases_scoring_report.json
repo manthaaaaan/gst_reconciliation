@@ -1,0 +1,90 @@
+{
+  "overall": {
+    "accuracy": 96.3,
+    "precision": 97.5,
+    "recall": 96.88,
+    "f1": 96.83
+  },
+  "per_code": {
+    "MATCHED": {
+      "expected": 4,
+      "detected": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "precision": 100.0,
+      "recall": 75.0,
+      "f1": 85.71
+    },
+    "MATCHED_WITH_VARIANCE": {
+      "expected": 4,
+      "detected": 5,
+      "tp": 4,
+      "fp": 1,
+      "fn": 0,
+      "precision": 80.0,
+      "recall": 100.0,
+      "f1": 88.89
+    },
+    "MISSING_IN_RETURNS": {
+      "expected": 5,
+      "detected": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    },
+    "RATE_MISMATCH": {
+      "expected": 2,
+      "detected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    },
+    "HSN_MISMATCH": {
+      "expected": 2,
+      "detected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    },
+    "DUPLICATE_ENTRY": {
+      "expected": 2,
+      "detected": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    },
+    "AMOUNT_MISMATCH": {
+      "expected": 5,
+      "detected": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    },
+    "UNRESOLVED": {
+      "expected": 3,
+      "detected": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 100.0,
+      "recall": 100.0,
+      "f1": 100.0
+    }
+  }
+}

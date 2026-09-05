@@ -1,0 +1,716 @@
+{
+  "stats": {
+    "total": 27,
+    "matched": 8,
+    "match_rate": 29.63,
+    "breakdown": {
+      "MATCHED_WITH_VARIANCE": 5,
+      "AMOUNT_MISMATCH": 5,
+      "MISSING_IN_RETURNS": 5,
+      "HSN_MISMATCH": 2,
+      "RATE_MISMATCH": 2,
+      "DUPLICATE_ENTRY": 2,
+      "MATCHED": 3,
+      "UNRESOLVED": 3
+    },
+    "confidence_breakdown": {
+      "LOW": 22,
+      "MEDIUM": 2,
+      "HIGH": 3
+    }
+  },
+  "results": [
+    {
+      "invoice_id": "EDGE001",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "LOW",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 10000.0,
+            "returned": 10005.0,
+            "delta": 5.0
+          },
+          {
+            "field": "gst_amount",
+            "expected": 1800.0,
+            "returned": 1800.9,
+            "delta": 0.9
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE001",
+        "date": "2024-05-01",
+        "hsn_code": "8471",
+        "taxable_amount": "10000.0",
+        "gst_rate": "18",
+        "gst_amount": "1800.0",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "EDGE001",
+        "date": "2024-05-01",
+        "hsn_code": "8471",
+        "taxable_amount": "10005.0",
+        "gst_rate": "18",
+        "gst_amount": "1800.9",
+        "vendor_id": "V001"
+      }
+    },
+    {
+      "invoice_id": "EDGE002",
+      "reason_code": "AMOUNT_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_taxable": "10000.0",
+        "returned_taxable": "10005.01",
+        "expected_gst": "1800.0",
+        "returned_gst": "1800.9"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE002",
+        "date": "2024-05-02",
+        "hsn_code": "8471",
+        "taxable_amount": "10000.0",
+        "gst_rate": "18",
+        "gst_amount": "1800.0",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "EDGE002",
+        "date": "2024-05-02",
+        "hsn_code": "8471",
+        "taxable_amount": "10005.01",
+        "gst_rate": "18",
+        "gst_amount": "1800.9",
+        "vendor_id": "V001"
+      }
+    },
+    {
+      "invoice_id": "EDGE003",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "LOW",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 20000.0,
+            "returned": 19995.0,
+            "delta": -5.0
+          },
+          {
+            "field": "gst_amount",
+            "expected": 3600.0,
+            "returned": 3599.1,
+            "delta": -0.9
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE003",
+        "date": "2024-05-03",
+        "hsn_code": "8471",
+        "taxable_amount": "20000.0",
+        "gst_rate": "18",
+        "gst_amount": "3600.0",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "EDGE003",
+        "date": "2024-05-03",
+        "hsn_code": "8471",
+        "taxable_amount": "19995.0",
+        "gst_rate": "18",
+        "gst_amount": "3599.1",
+        "vendor_id": "V002"
+      }
+    },
+    {
+      "invoice_id": "EDGE004",
+      "reason_code": "AMOUNT_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_taxable": "20000.0",
+        "returned_taxable": "19994.99",
+        "expected_gst": "3600.0",
+        "returned_gst": "3599.1"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE004",
+        "date": "2024-05-04",
+        "hsn_code": "8471",
+        "taxable_amount": "20000.0",
+        "gst_rate": "18",
+        "gst_amount": "3600.0",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "EDGE004",
+        "date": "2024-05-04",
+        "hsn_code": "8471",
+        "taxable_amount": "19994.99",
+        "gst_rate": "18",
+        "gst_amount": "3599.1",
+        "vendor_id": "V002"
+      }
+    },
+    {
+      "invoice_id": "EDGE005_INV",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE005_INV",
+        "date": "2024-05-05",
+        "hsn_code": "8471",
+        "taxable_amount": "15000.0",
+        "gst_rate": "18",
+        "gst_amount": "2700.0",
+        "vendor_id": "V001"
+      },
+      "return_data": null
+    },
+    {
+      "invoice_id": "EDGE006",
+      "reason_code": "HSN_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_hsn": "8471",
+        "returned_hsn": "8472"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE006",
+        "date": "2024-05-06",
+        "hsn_code": "8471",
+        "taxable_amount": "12000.0",
+        "gst_rate": "18",
+        "gst_amount": "2160.0",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "EDGE006",
+        "date": "2024-05-06",
+        "hsn_code": "8472",
+        "taxable_amount": "12000.0",
+        "gst_rate": "18",
+        "gst_amount": "2160.0",
+        "vendor_id": "V003"
+      }
+    },
+    {
+      "invoice_id": "EDGE007",
+      "reason_code": "HSN_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_hsn": "8504",
+        "returned_hsn": "8507"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE007",
+        "date": "2024-05-07",
+        "hsn_code": "8504",
+        "taxable_amount": "18000.0",
+        "gst_rate": "18",
+        "gst_amount": "3240.0",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "EDGE007",
+        "date": "2024-05-07",
+        "hsn_code": "8507",
+        "taxable_amount": "18000.0",
+        "gst_rate": "18",
+        "gst_amount": "3240.0",
+        "vendor_id": "V004"
+      }
+    },
+    {
+      "invoice_id": "EDGE008",
+      "reason_code": "RATE_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_gst_rate": "18",
+        "returned_gst_rate": "28"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE008",
+        "date": "2024-05-08",
+        "hsn_code": "8471",
+        "taxable_amount": "10000.0",
+        "gst_rate": "18",
+        "gst_amount": "1800.0",
+        "vendor_id": "V005"
+      },
+      "return_data": {
+        "invoice_id": "EDGE008",
+        "date": "2024-05-08",
+        "hsn_code": "8471",
+        "taxable_amount": "10000.0",
+        "gst_rate": "28",
+        "gst_amount": "2800.0",
+        "vendor_id": "V005"
+      }
+    },
+    {
+      "invoice_id": "EDGE009",
+      "reason_code": "AMOUNT_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_taxable": "50000.0",
+        "returned_taxable": "25000.0",
+        "expected_gst": "9000.0",
+        "returned_gst": "4500.0"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE009",
+        "date": "2024-05-09",
+        "hsn_code": "8471",
+        "taxable_amount": "50000.0",
+        "gst_rate": "18",
+        "gst_amount": "9000.0",
+        "vendor_id": "V006"
+      },
+      "return_data": {
+        "invoice_id": "EDGE009",
+        "date": "2024-05-09",
+        "hsn_code": "8471",
+        "taxable_amount": "25000.0",
+        "gst_rate": "18",
+        "gst_amount": "4500.0",
+        "vendor_id": "V006"
+      }
+    },
+    {
+      "invoice_id": "EDGE010_INV",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE010_INV",
+        "date": "2024-05-10",
+        "hsn_code": "8471",
+        "taxable_amount": "35000.0",
+        "gst_rate": "18",
+        "gst_amount": "6300.0",
+        "vendor_id": "V007"
+      },
+      "return_data": null
+    },
+    {
+      "invoice_id": "EDGE011",
+      "reason_code": "DUPLICATE_ENTRY",
+      "confidence": "LOW",
+      "metadata": {
+        "occurrences": 2
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE011",
+        "date": "2024-05-11",
+        "hsn_code": "8471",
+        "taxable_amount": "22000.0",
+        "gst_rate": "18",
+        "gst_amount": "3960.0",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "EDGE011",
+        "date": "2024-05-11",
+        "hsn_code": "8471",
+        "taxable_amount": "22000.0",
+        "gst_rate": "18",
+        "gst_amount": "3960.0",
+        "vendor_id": "V008"
+      }
+    },
+    {
+      "invoice_id": "EDGE012",
+      "reason_code": "DUPLICATE_ENTRY",
+      "confidence": "LOW",
+      "metadata": {
+        "occurrences": 2
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE012",
+        "date": "2024-05-12",
+        "hsn_code": "8471",
+        "taxable_amount": "45000.0",
+        "gst_rate": "18",
+        "gst_amount": "8100.0",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "EDGE012",
+        "date": "2024-05-12",
+        "hsn_code": "8471",
+        "taxable_amount": "45000.0",
+        "gst_rate": "18",
+        "gst_amount": "8100.0",
+        "vendor_id": "V009"
+      }
+    },
+    {
+      "invoice_id": "EDGE013",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "MEDIUM",
+      "metadata": {
+        "variances": [
+          {
+            "field": "gst_amount",
+            "expected": 600.0,
+            "returned": 599.99,
+            "delta": -0.01
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE013",
+        "date": "2024-05-13",
+        "hsn_code": "8471",
+        "taxable_amount": "3333.33",
+        "gst_rate": "18",
+        "gst_amount": "600.0",
+        "vendor_id": "V010"
+      },
+      "return_data": {
+        "invoice_id": "EDGE013",
+        "date": "2024-05-13",
+        "hsn_code": "8471",
+        "taxable_amount": "3333.33",
+        "gst_rate": "18",
+        "gst_amount": "599.99",
+        "vendor_id": "V010"
+      }
+    },
+    {
+      "invoice_id": "EDGE014",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE014",
+        "date": "2024-05-14",
+        "hsn_code": "8471",
+        "taxable_amount": "14000.0",
+        "gst_rate": "18",
+        "gst_amount": "2520.0",
+        "vendor_id": "V001"
+      },
+      "return_data": null
+    },
+    {
+      "invoice_id": "EDGE015",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE015",
+        "date": "2024-05-15",
+        "hsn_code": "8471",
+        "taxable_amount": "8000.0",
+        "gst_rate": "18",
+        "gst_amount": "1440.0",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "EDGE015",
+        "date": "2024-05-15",
+        "hsn_code": "8471",
+        "taxable_amount": "8000.0",
+        "gst_rate": "18",
+        "gst_amount": "1440.0",
+        "vendor_id": "V002"
+      }
+    },
+    {
+      "invoice_id": "EDGE016",
+      "reason_code": "RATE_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_gst_rate": "18",
+        "returned_gst_rate": "12"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE016",
+        "date": "2024-05-16",
+        "hsn_code": "8471",
+        "taxable_amount": "16000.0",
+        "gst_rate": "18",
+        "gst_amount": "2880.0",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "EDGE016",
+        "date": "2024-05-16",
+        "hsn_code": "9018",
+        "taxable_amount": "16000.0",
+        "gst_rate": "12",
+        "gst_amount": "1920.0",
+        "vendor_id": "V003"
+      }
+    },
+    {
+      "invoice_id": "EDGE017",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "MEDIUM",
+      "metadata": {
+        "variances": [
+          {
+            "field": "vendor_id",
+            "note": "fuzzy matched on vendor+date+amount"
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE017",
+        "date": "2024-05-17",
+        "hsn_code": "8471",
+        "taxable_amount": "27000.0",
+        "gst_rate": "18",
+        "gst_amount": "4860.0",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "edge017",
+        "date": "2024-05-17",
+        "hsn_code": "8471",
+        "taxable_amount": "27000.0",
+        "gst_rate": "18",
+        "gst_amount": "4860.0",
+        "vendor_id": "V004"
+      }
+    },
+    {
+      "invoice_id": "EDGE018",
+      "reason_code": "AMOUNT_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_taxable": "50000.0",
+        "returned_taxable": "48000.0",
+        "expected_gst": "9000.0",
+        "returned_gst": "8640.0"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE018",
+        "date": "2024-05-18",
+        "hsn_code": "8471",
+        "taxable_amount": "50000.0",
+        "gst_rate": "18",
+        "gst_amount": "9000.0",
+        "vendor_id": "V005"
+      },
+      "return_data": {
+        "invoice_id": "EDGE018",
+        "date": "2024-05-18",
+        "hsn_code": "8471",
+        "taxable_amount": "48000.0",
+        "gst_rate": "18",
+        "gst_amount": "8640.0",
+        "vendor_id": "V005"
+      }
+    },
+    {
+      "invoice_id": "EDGE019",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE019",
+        "date": "2024-05-19",
+        "hsn_code": "8471",
+        "taxable_amount": "31000.0",
+        "gst_rate": "18",
+        "gst_amount": "5580.0",
+        "vendor_id": "V006"
+      },
+      "return_data": null
+    },
+    {
+      "invoice_id": "EDGE020",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE020",
+        "date": "2024-05-20",
+        "hsn_code": "8471",
+        "taxable_amount": "42000.0",
+        "gst_rate": "18",
+        "gst_amount": "7560.0",
+        "vendor_id": "V007"
+      },
+      "return_data": {
+        "invoice_id": "EDGE020",
+        "date": "2024-05-20",
+        "hsn_code": "8471",
+        "taxable_amount": "42000.0",
+        "gst_rate": "18",
+        "gst_amount": "7560.0",
+        "vendor_id": "V007"
+      }
+    },
+    {
+      "invoice_id": "EDGE021",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "LOW",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 1000000.0,
+            "returned": 1000004.9,
+            "delta": 4.9
+          },
+          {
+            "field": "gst_amount",
+            "expected": 180000.0,
+            "returned": 180000.88,
+            "delta": 0.88
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE021",
+        "date": "2024-05-21",
+        "hsn_code": "8471",
+        "taxable_amount": "1000000.0",
+        "gst_rate": "18",
+        "gst_amount": "180000.0",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "EDGE021",
+        "date": "2024-05-21",
+        "hsn_code": "8471",
+        "taxable_amount": "1000004.9",
+        "gst_rate": "18",
+        "gst_amount": "180000.88",
+        "vendor_id": "V008"
+      }
+    },
+    {
+      "invoice_id": "EDGE022",
+      "reason_code": "AMOUNT_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_taxable": "1000000.0",
+        "returned_taxable": "1000010.0",
+        "expected_gst": "180000.0",
+        "returned_gst": "180001.8"
+      },
+      "invoice_data": {
+        "invoice_id": "EDGE022",
+        "date": "2024-05-22",
+        "hsn_code": "8471",
+        "taxable_amount": "1000000.0",
+        "gst_rate": "18",
+        "gst_amount": "180000.0",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "EDGE022",
+        "date": "2024-05-22",
+        "hsn_code": "8471",
+        "taxable_amount": "1000010.0",
+        "gst_rate": "18",
+        "gst_amount": "180001.8",
+        "vendor_id": "V008"
+      }
+    },
+    {
+      "invoice_id": "EDGE023_INV",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE023_INV",
+        "date": "2024-05-23",
+        "hsn_code": "8471",
+        "taxable_amount": "28000.0",
+        "gst_rate": "18",
+        "gst_amount": "5040.0",
+        "vendor_id": "V008"
+      },
+      "return_data": null
+    },
+    {
+      "invoice_id": "EDGE024",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "EDGE024",
+        "date": "2024-05-24",
+        "hsn_code": "8471",
+        "taxable_amount": "64000.0",
+        "gst_rate": "18",
+        "gst_amount": "11520.0",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "EDGE024",
+        "date": "2024-05-24",
+        "hsn_code": "8471",
+        "taxable_amount": "64000.0",
+        "gst_rate": "18",
+        "gst_amount": "11520.0",
+        "vendor_id": "V009"
+      }
+    },
+    {
+      "invoice_id": "EDGE005_RET",
+      "reason_code": "UNRESOLVED",
+      "confidence": "LOW",
+      "metadata": {
+        "note": "return row with no matching invoice"
+      },
+      "invoice_data": null,
+      "return_data": {
+        "invoice_id": "EDGE005_RET",
+        "date": "2024-05-05",
+        "hsn_code": "8471",
+        "taxable_amount": "15000.0",
+        "gst_rate": "18",
+        "gst_amount": "2700.0",
+        "vendor_id": "V010"
+      }
+    },
+    {
+      "invoice_id": "EDGE010_RET",
+      "reason_code": "UNRESOLVED",
+      "confidence": "LOW",
+      "metadata": {
+        "note": "return row with no matching invoice"
+      },
+      "invoice_data": null,
+      "return_data": {
+        "invoice_id": "EDGE010_RET",
+        "date": "2024-05-11",
+        "hsn_code": "8471",
+        "taxable_amount": "35000.0",
+        "gst_rate": "18",
+        "gst_amount": "6300.0",
+        "vendor_id": "V007"
+      }
+    },
+    {
+      "invoice_id": "EDGE023_RET",
+      "reason_code": "UNRESOLVED",
+      "confidence": "LOW",
+      "metadata": {
+        "note": "return row with no matching invoice"
+      },
+      "invoice_data": null,
+      "return_data": {
+        "invoice_id": "EDGE023_RET",
+        "date": "2024-05-23",
+        "hsn_code": "8471",
+        "taxable_amount": "28000.0",
+        "gst_rate": "18",
+        "gst_amount": "5040.0",
+        "vendor_id": "V080"
+      }
+    }
+  ]
+}

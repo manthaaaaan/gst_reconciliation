@@ -1,0 +1,146 @@
+{
+  "EDGE001": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "expected_exception": "ROUNDING_DIFF",
+    "note": "Exact +\u20b95.00 tolerance"
+  },
+  "EDGE002": {
+    "status": "mismatch",
+    "type": "amount_mismatch",
+    "expected_exception": "AMOUNT_MISMATCH",
+    "note": "Exceeds \u20b95.00 tolerance by +1 paisa"
+  },
+  "EDGE003": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "expected_exception": "ROUNDING_DIFF",
+    "note": "Exact -\u20b95.00 tolerance"
+  },
+  "EDGE004": {
+    "status": "mismatch",
+    "type": "amount_mismatch",
+    "expected_exception": "AMOUNT_MISMATCH",
+    "note": "Exceeds \u20b95.00 tolerance by -1 paisa"
+  },
+  "EDGE005_INV": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN",
+    "note": "Fuzzy fails due to vendor mismatch V001 vs V010"
+  },
+  "EDGE006": {
+    "status": "mismatch",
+    "type": "hsn_discrepancy",
+    "expected_exception": "HSN_MISMATCH",
+    "note": "HSN typo 8471 vs 8472"
+  },
+  "EDGE007": {
+    "status": "mismatch",
+    "type": "hsn_discrepancy",
+    "expected_exception": "HSN_MISMATCH",
+    "note": "HSN typo 8504 vs 8507"
+  },
+  "EDGE008": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "expected_exception": "GST_RATE_MISMATCH",
+    "note": "Rate 18% vs 28%"
+  },
+  "EDGE009": {
+    "status": "mismatch",
+    "type": "amount_mismatch",
+    "expected_exception": "AMOUNT_MISMATCH",
+    "note": "Defective split return (partial item)"
+  },
+  "EDGE010_INV": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN",
+    "note": "Fuzzy fails due to date off by 1 day"
+  },
+  "EDGE011": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "expected_exception": "DUPLICATE_IN_RETURN",
+    "note": "Exact duplicate filing"
+  },
+  "EDGE012": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "expected_exception": "DUPLICATE_IN_RETURN",
+    "note": "Duplicate filing with 5p variance"
+  },
+  "EDGE013": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "expected_exception": "ROUNDING_DIFF",
+    "note": "1 paisa GST rounding"
+  },
+  "EDGE014": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN",
+    "note": "Genuine missing return"
+  },
+  "EDGE015": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null,
+    "note": "Exact match control"
+  },
+  "EDGE016": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "expected_exception": "GST_RATE_MISMATCH",
+    "note": "Multi-field compound error"
+  },
+  "EDGE017": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null,
+    "note": "Case difference in ID"
+  },
+  "EDGE018": {
+    "status": "mismatch",
+    "type": "amount_mismatch",
+    "expected_exception": "AMOUNT_MISMATCH",
+    "note": "Major amount mismatch"
+  },
+  "EDGE019": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN",
+    "note": "Genuine missing return"
+  },
+  "EDGE020": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null,
+    "note": "Exact match control"
+  },
+  "EDGE021": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "expected_exception": "ROUNDING_DIFF",
+    "note": "High value micro-variance +4.90"
+  },
+  "EDGE022": {
+    "status": "mismatch",
+    "type": "amount_mismatch",
+    "expected_exception": "AMOUNT_MISMATCH",
+    "note": "High value excessive variance +10.00"
+  },
+  "EDGE023_INV": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN",
+    "note": "Fuzzy fails on vendor typo V008 vs V080"
+  },
+  "EDGE024": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null,
+    "note": "Exact match control"
+  }
+}

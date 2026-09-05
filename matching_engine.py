@@ -28,11 +28,17 @@ def reconcile(invoices: List[Dict[str, Any]], returns: List[Dict[str, Any]]) -> 
 
 
 def main():
-    invoices_path = "invoices.csv"
-    returns_path = "gst_returns.csv"
+    if "--edge-cases" in sys.argv:
+        invoices_path = "edge_cases.csv"
+        returns_path = "edge_cases_returns.csv"
+        output_path = "edge_cases_results.json"
+    else:
+        invoices_path = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "invoices.csv"
+        returns_path = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else "gst_returns.csv"
+        output_path = sys.argv[3] if len(sys.argv) > 3 and not sys.argv[3].startswith("--") else "results.json"
 
     if not os.path.exists(invoices_path) or not os.path.exists(returns_path):
-        print("Error: CSV files (invoices.csv, gst_returns.csv) not found.")
+        print(f"Error: CSV files ({invoices_path}, {returns_path}) not found.")
         return
 
     invoices = load_csv(invoices_path)
@@ -42,7 +48,7 @@ def main():
     stats = compute_stats(results)
 
     output = {"stats": stats, "results": results}
-    with open("results.json", "w", encoding="utf-8") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
 
     print("=" * 60)
