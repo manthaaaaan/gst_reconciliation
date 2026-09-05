@@ -200,7 +200,7 @@ def generate_adversarial_dataset():
             "gst_amount": 3600.00,
             "vendor_id": "V002",
         },
-        # --- Adversarial 5: Visually similar vendor ID (V001 filed as V010) on fuzzy fallback ---
+        # --- Adversarial 5: Visually similar vendor ID (V004 filed as V0O4) on fuzzy fallback ---
         {
             "invoice_id": "EDGE005_INV",
             "date": "2024-05-05",
@@ -208,7 +208,7 @@ def generate_adversarial_dataset():
             "taxable_amount": 15000.00,
             "gst_rate": 18,
             "gst_amount": 2700.00,
-            "vendor_id": "V001",
+            "vendor_id": "V004",
         },
         # --- Adversarial 6: HSN code typo by one digit (8471 vs 8472) ---
         {
@@ -411,8 +411,8 @@ def generate_adversarial_dataset():
         {"invoice_id": "EDGE003", "date": "2024-05-03", "hsn_code": 8471, "taxable_amount": 19995.00, "gst_rate": 18, "gst_amount": 3599.10, "vendor_id": "V002"},
         # Return 4: -5.01 variance (over 5.00 limit)
         {"invoice_id": "EDGE004", "date": "2024-05-04", "hsn_code": 8471, "taxable_amount": 19994.99, "gst_rate": 18, "gst_amount": 3599.10, "vendor_id": "V002"},
-        # Return 5: Return filed under V010 instead of V001
-        {"invoice_id": "EDGE005_RET", "date": "2024-05-05", "hsn_code": 8471, "taxable_amount": 15000.00, "gst_rate": 18, "gst_amount": 2700.00, "vendor_id": "V010"},
+        # Return 5: Return filed under V0O4 instead of V004
+        {"invoice_id": "EDGE005_RET", "date": "2024-05-05", "hsn_code": 8471, "taxable_amount": 15000.00, "gst_rate": 18, "gst_amount": 2700.00, "vendor_id": "V0O4"},
         # Return 6: HSN typo 8472
         {"invoice_id": "EDGE006", "date": "2024-05-06", "hsn_code": 8472, "taxable_amount": 12000.00, "gst_rate": 18, "gst_amount": 2160.00, "vendor_id": "V003"},
         # Return 7: HSN typo 8507

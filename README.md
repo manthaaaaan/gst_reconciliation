@@ -250,7 +250,7 @@ DUPLICATE_ENTRY                   0             1             0           0     
 
 ---
 
-### 3. Adversarial Edge-Case Stress Test
+### 3. Stress Test — Edge Cases
 
 A 100% score on a synthetic set confirms internal consistency against its own ground truth. To test how the engine behaves under deliberate boundary stress, we constructed a separate 24-row adversarial dataset (`edge_cases.csv`, `edge_cases_returns.csv`, `edge_cases_ground_truth.json`):
 
