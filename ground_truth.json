@@ -1,0 +1,322 @@
+{
+  "INV00001": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00002": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00003": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00004": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00005": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "occurrences": 2,
+    "expected_exception": "DUPLICATE_IN_RETURN"
+  },
+  "INV00006": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00007": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00008": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00009": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "original_rate": 28,
+    "returned_rate": 18,
+    "expected_exception": "GST_RATE_MISMATCH"
+  },
+  "INV00010": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00011": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN"
+  },
+  "INV00012": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00013": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00014": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00015": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00016": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN"
+  },
+  "INV00017": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "field": "taxable_amount",
+    "difference": 4,
+    "expected_exception": "ROUNDING_DIFF"
+  },
+  "INV00018": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00019": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "original_rate": 12,
+    "returned_rate": 18,
+    "expected_exception": "GST_RATE_MISMATCH"
+  },
+  "INV00020": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "occurrences": 2,
+    "expected_exception": "DUPLICATE_IN_RETURN"
+  },
+  "INV00021": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00022": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00023": {
+    "status": "mismatch",
+    "type": "hsn_discrepancy",
+    "original_hsn": 8473,
+    "returned_hsn": 8517,
+    "expected_exception": "HSN_MISMATCH"
+  },
+  "INV00024": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "original_rate": 5,
+    "returned_rate": 12,
+    "expected_exception": "GST_RATE_MISMATCH"
+  },
+  "INV00025": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00026": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00027": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00028": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00029": {
+    "status": "mismatch",
+    "type": "gst_rate_error",
+    "original_rate": 5,
+    "returned_rate": 18,
+    "expected_exception": "GST_RATE_MISMATCH"
+  },
+  "INV00030": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00031": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00032": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00033": {
+    "status": "mismatch",
+    "type": "hsn_discrepancy",
+    "original_hsn": 8517,
+    "returned_hsn": 8473,
+    "expected_exception": "HSN_MISMATCH"
+  },
+  "INV00034": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00035": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "occurrences": 2,
+    "expected_exception": "DUPLICATE_IN_RETURN"
+  },
+  "INV00036": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00037": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00038": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00039": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00040": {
+    "status": "mismatch",
+    "type": "duplicate_filing",
+    "occurrences": 2,
+    "expected_exception": "DUPLICATE_IN_RETURN"
+  },
+  "INV00041": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00042": {
+    "status": "mismatch",
+    "type": "rounding_difference",
+    "field": "taxable_amount",
+    "difference": 4,
+    "expected_exception": "ROUNDING_DIFF"
+  },
+  "INV00043": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00044": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00045": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00046": {
+    "status": "mismatch",
+    "type": "missing_row",
+    "expected_exception": "MISSING_IN_RETURN"
+  },
+  "INV00047": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00048": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00049": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00050": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00051": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00052": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00053": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00054": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00055": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00056": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00057": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00058": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00059": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  },
+  "INV00060": {
+    "status": "matched",
+    "type": null,
+    "expected_exception": null
+  }
+}

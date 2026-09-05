@@ -1,0 +1,1669 @@
+{
+  "stats": {
+    "total": 60,
+    "matched": 45,
+    "match_rate": 75.0,
+    "breakdown": {
+      "MATCHED": 42,
+      "DUPLICATE_ENTRY": 3,
+      "MISSING_IN_RETURNS": 8,
+      "MATCHED_WITH_VARIANCE": 3,
+      "HSN_MISMATCH": 2,
+      "RATE_MISMATCH": 2
+    },
+    "confidence_breakdown": {
+      "HIGH": 42,
+      "LOW": 17,
+      "MEDIUM": 1
+    }
+  },
+  "results": [
+    {
+      "invoice_id": "INV00001",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00001",
+        "date": "2024-06-21",
+        "hsn_code": "8473",
+        "taxable_amount": "74413.5",
+        "gst_rate": "5",
+        "gst_amount": "3720.68",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00001",
+        "date": "2024-06-21",
+        "hsn_code": "8473",
+        "taxable_amount": "74413.5",
+        "gst_rate": "5",
+        "gst_amount": "3720.68",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00002",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00002",
+        "date": "2024-04-29",
+        "hsn_code": "8517",
+        "taxable_amount": "67993.25",
+        "gst_rate": "5",
+        "gst_amount": "3399.66",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00002",
+        "date": "2024-04-29",
+        "hsn_code": "8517",
+        "taxable_amount": "67993.25",
+        "gst_rate": "5",
+        "gst_amount": "3399.66",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00003",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00003",
+        "date": "2024-04-12",
+        "hsn_code": "9027",
+        "taxable_amount": "4146.49",
+        "gst_rate": "28",
+        "gst_amount": "1161.02",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00003",
+        "date": "2024-04-12",
+        "hsn_code": "9027",
+        "taxable_amount": "4146.49",
+        "gst_rate": "28",
+        "gst_amount": "1161.02",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00004",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00004",
+        "date": "2024-04-28",
+        "hsn_code": "8528",
+        "taxable_amount": "56563.26",
+        "gst_rate": "5",
+        "gst_amount": "2828.16",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00004",
+        "date": "2024-04-28",
+        "hsn_code": "8528",
+        "taxable_amount": "56563.26",
+        "gst_rate": "5",
+        "gst_amount": "2828.16",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00005",
+      "reason_code": "DUPLICATE_ENTRY",
+      "confidence": "LOW",
+      "metadata": {
+        "occurrences": 2
+      },
+      "invoice_data": {
+        "invoice_id": "INV00005",
+        "date": "2024-05-24",
+        "hsn_code": "8528",
+        "taxable_amount": "59337.3",
+        "gst_rate": "28",
+        "gst_amount": "16614.44",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "INV00005",
+        "date": "2024-05-24",
+        "hsn_code": "8528",
+        "taxable_amount": "59337.3",
+        "gst_rate": "28",
+        "gst_amount": "16614.44",
+        "vendor_id": "V001",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00005 is flagged as a DUPLICATE_ENTRY because it appears 2 times in the return."
+    },
+    {
+      "invoice_id": "INV00006",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00006",
+        "date": "2024-04-21",
+        "hsn_code": "8419",
+        "taxable_amount": "28509.26",
+        "gst_rate": "18",
+        "gst_amount": "5131.67",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00006",
+        "date": "2024-04-21",
+        "hsn_code": "8419",
+        "taxable_amount": "28509.26",
+        "gst_rate": "18",
+        "gst_amount": "5131.67",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00007",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00007",
+        "date": "2024-05-14",
+        "hsn_code": "8473",
+        "taxable_amount": "38612.8",
+        "gst_rate": "5",
+        "gst_amount": "1930.64",
+        "vendor_id": "V006"
+      },
+      "return_data": {
+        "invoice_id": "INV00007",
+        "date": "2024-05-14",
+        "hsn_code": "8473",
+        "taxable_amount": "38612.8",
+        "gst_rate": "5",
+        "gst_amount": "1930.64",
+        "vendor_id": "V006",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00008",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00008",
+        "date": "2024-05-15",
+        "hsn_code": "9027",
+        "taxable_amount": "80905.7",
+        "gst_rate": "18",
+        "gst_amount": "14563.03",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00008",
+        "date": "2024-05-15",
+        "hsn_code": "9027",
+        "taxable_amount": "80905.7",
+        "gst_rate": "18",
+        "gst_amount": "14563.03",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00009",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00009",
+        "date": "2024-06-08",
+        "hsn_code": "8473",
+        "taxable_amount": "8801.22",
+        "gst_rate": "28",
+        "gst_amount": "2464.34",
+        "vendor_id": "V005"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00009 (\u20b98801.22 taxable, 28% GST) is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00010",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00010",
+        "date": "2024-06-20",
+        "hsn_code": "9027",
+        "taxable_amount": "58157.86",
+        "gst_rate": "18",
+        "gst_amount": "10468.41",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00010",
+        "date": "2024-06-20",
+        "hsn_code": "9027",
+        "taxable_amount": "58157.86",
+        "gst_rate": "18",
+        "gst_amount": "10468.41",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00011",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00011",
+        "date": "2024-04-06",
+        "hsn_code": "8528",
+        "taxable_amount": "98536.93",
+        "gst_rate": "18",
+        "gst_amount": "17736.65",
+        "vendor_id": "V004"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00011, with a taxable value of \u20b998536.93 and 18% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00012",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00012",
+        "date": "2024-04-13",
+        "hsn_code": "8419",
+        "taxable_amount": "45887.62",
+        "gst_rate": "18",
+        "gst_amount": "8259.77",
+        "vendor_id": "V006"
+      },
+      "return_data": {
+        "invoice_id": "INV00012",
+        "date": "2024-04-13",
+        "hsn_code": "8419",
+        "taxable_amount": "45887.62",
+        "gst_rate": "18",
+        "gst_amount": "8259.77",
+        "vendor_id": "V006",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00013",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00013",
+        "date": "2024-04-21",
+        "hsn_code": "8507",
+        "taxable_amount": "21741.2",
+        "gst_rate": "18",
+        "gst_amount": "3913.42",
+        "vendor_id": "V005"
+      },
+      "return_data": {
+        "invoice_id": "INV00013",
+        "date": "2024-04-21",
+        "hsn_code": "8507",
+        "taxable_amount": "21741.2",
+        "gst_rate": "18",
+        "gst_amount": "3913.42",
+        "vendor_id": "V005",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00014",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00014",
+        "date": "2024-06-29",
+        "hsn_code": "8473",
+        "taxable_amount": "53879.85",
+        "gst_rate": "12",
+        "gst_amount": "6465.58",
+        "vendor_id": "V004"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00014, with a taxable value of \u20b953879.85 and 12% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00015",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00015",
+        "date": "2024-04-21",
+        "hsn_code": "8421",
+        "taxable_amount": "27724.83",
+        "gst_rate": "28",
+        "gst_amount": "7762.95",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00015",
+        "date": "2024-04-21",
+        "hsn_code": "8421",
+        "taxable_amount": "27724.83",
+        "gst_rate": "28",
+        "gst_amount": "7762.95",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00016",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00016",
+        "date": "2024-04-29",
+        "hsn_code": "8507",
+        "taxable_amount": "23675.76",
+        "gst_rate": "5",
+        "gst_amount": "1183.79",
+        "vendor_id": "V001"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00016, with a taxable value of \u20b923675.76 and 5% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00017",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "LOW",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 7552.67,
+            "returned": 7556.67,
+            "delta": 4.0
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "INV00017",
+        "date": "2024-05-11",
+        "hsn_code": "8419",
+        "taxable_amount": "7552.67",
+        "gst_rate": "18",
+        "gst_amount": "1359.48",
+        "vendor_id": "V010"
+      },
+      "return_data": {
+        "invoice_id": "INV00017",
+        "date": "2024-05-11",
+        "hsn_code": "8419",
+        "taxable_amount": "7556.67",
+        "gst_rate": "18",
+        "gst_amount": "1359.48",
+        "vendor_id": "V010",
+        "original_value": "7552.67",
+        "difference": "4.0",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00017 is flagged as MATCHED_WITH_VARIANCE due to a \u20b94.00 discrepancy in the taxable amount, where the invoice records \u20b97552.67 against the return's \u20b97556.67."
+    },
+    {
+      "invoice_id": "INV00018",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00018",
+        "date": "2024-05-11",
+        "hsn_code": "8528",
+        "taxable_amount": "40167.56",
+        "gst_rate": "28",
+        "gst_amount": "11246.92",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00018",
+        "date": "2024-05-11",
+        "hsn_code": "8528",
+        "taxable_amount": "40167.56",
+        "gst_rate": "28",
+        "gst_amount": "11246.92",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00019",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00019",
+        "date": "2024-04-19",
+        "hsn_code": "8504",
+        "taxable_amount": "25416.12",
+        "gst_rate": "12",
+        "gst_amount": "3049.93",
+        "vendor_id": "V009"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00019, with a taxable value of \u20b925416.12 and 12% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00020",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "MEDIUM",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 89884.47,
+            "returned": 89884.48,
+            "delta": 0.01
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "INV00020",
+        "date": "2024-06-08",
+        "hsn_code": "8504",
+        "taxable_amount": "89884.47",
+        "gst_rate": "28",
+        "gst_amount": "25167.65",
+        "vendor_id": "V007"
+      },
+      "return_data": {
+        "invoice_id": "INV00020",
+        "date": "2024-06-08",
+        "hsn_code": "8504",
+        "taxable_amount": "89884.48",
+        "gst_rate": "28",
+        "gst_amount": "25167.65",
+        "vendor_id": "V007",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00020 is flagged as MATCHED_WITH_VARIANCE due to a \u20b90.01 discrepancy in taxable_amount, where the invoice shows \u20b989884.47 and the return shows \u20b989884.48."
+    },
+    {
+      "invoice_id": "INV00021",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00021",
+        "date": "2024-05-17",
+        "hsn_code": "8528",
+        "taxable_amount": "51443.1",
+        "gst_rate": "12",
+        "gst_amount": "6173.17",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00021",
+        "date": "2024-05-17",
+        "hsn_code": "8528",
+        "taxable_amount": "51443.1",
+        "gst_rate": "12",
+        "gst_amount": "6173.17",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00022",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00022",
+        "date": "2024-04-07",
+        "hsn_code": "8473",
+        "taxable_amount": "63117.16",
+        "gst_rate": "12",
+        "gst_amount": "7574.06",
+        "vendor_id": "V007"
+      },
+      "return_data": {
+        "invoice_id": "INV00022",
+        "date": "2024-04-07",
+        "hsn_code": "8473",
+        "taxable_amount": "63117.16",
+        "gst_rate": "12",
+        "gst_amount": "7574.06",
+        "vendor_id": "V007",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00023",
+      "reason_code": "HSN_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_hsn": "8473",
+        "returned_hsn": "8517"
+      },
+      "invoice_data": {
+        "invoice_id": "INV00023",
+        "date": "2024-06-16",
+        "hsn_code": "8473",
+        "taxable_amount": "38780.31",
+        "gst_rate": "28",
+        "gst_amount": "10858.49",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00023",
+        "date": "2024-06-16",
+        "hsn_code": "8517",
+        "taxable_amount": "38780.31",
+        "gst_rate": "28",
+        "gst_amount": "10858.49",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": "8473.0"
+      },
+      "llm_explanation": "Invoice INV00023 exhibits an HSN_MISMATCH where the invoice lists HSN code 8473, whereas the return reflects HSN code 8517."
+    },
+    {
+      "invoice_id": "INV00024",
+      "reason_code": "RATE_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_gst_rate": "5",
+        "returned_gst_rate": "12"
+      },
+      "invoice_data": {
+        "invoice_id": "INV00024",
+        "date": "2024-06-07",
+        "hsn_code": "8504",
+        "taxable_amount": "68348.06",
+        "gst_rate": "5",
+        "gst_amount": "3417.4",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00024",
+        "date": "2024-06-07",
+        "hsn_code": "8504",
+        "taxable_amount": "68348.06",
+        "gst_rate": "12",
+        "gst_amount": "8201.77",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "5.0",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00024 exhibits a RATE_MISMATCH exception where the invoice GST rate of 5% does not align with the 12% rate reported in the return."
+    },
+    {
+      "invoice_id": "INV00025",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00025",
+        "date": "2024-06-27",
+        "hsn_code": "9018",
+        "taxable_amount": "77091.27",
+        "gst_rate": "18",
+        "gst_amount": "13876.43",
+        "vendor_id": "V006"
+      },
+      "return_data": {
+        "invoice_id": "INV00025",
+        "date": "2024-06-27",
+        "hsn_code": "9018",
+        "taxable_amount": "77091.27",
+        "gst_rate": "18",
+        "gst_amount": "13876.43",
+        "vendor_id": "V006",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00026",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00026",
+        "date": "2024-04-15",
+        "hsn_code": "8504",
+        "taxable_amount": "16657.62",
+        "gst_rate": "28",
+        "gst_amount": "4664.13",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "INV00026",
+        "date": "2024-04-15",
+        "hsn_code": "8504",
+        "taxable_amount": "16657.62",
+        "gst_rate": "28",
+        "gst_amount": "4664.13",
+        "vendor_id": "V001",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00027",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00027",
+        "date": "2024-05-04",
+        "hsn_code": "9018",
+        "taxable_amount": "51260.49",
+        "gst_rate": "12",
+        "gst_amount": "6151.26",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00027",
+        "date": "2024-05-04",
+        "hsn_code": "9018",
+        "taxable_amount": "51260.49",
+        "gst_rate": "12",
+        "gst_amount": "6151.26",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00028",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00028",
+        "date": "2024-06-20",
+        "hsn_code": "8504",
+        "taxable_amount": "16131.09",
+        "gst_rate": "12",
+        "gst_amount": "1935.73",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "INV00028",
+        "date": "2024-06-20",
+        "hsn_code": "8504",
+        "taxable_amount": "16131.09",
+        "gst_rate": "12",
+        "gst_amount": "1935.73",
+        "vendor_id": "V003",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00029",
+      "reason_code": "RATE_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_gst_rate": "5",
+        "returned_gst_rate": "18"
+      },
+      "invoice_data": {
+        "invoice_id": "INV00029",
+        "date": "2024-06-09",
+        "hsn_code": "9018",
+        "taxable_amount": "60295.51",
+        "gst_rate": "5",
+        "gst_amount": "3014.78",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00029",
+        "date": "2024-06-09",
+        "hsn_code": "9018",
+        "taxable_amount": "60295.51",
+        "gst_rate": "18",
+        "gst_amount": "10853.19",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "5.0",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00029 exhibits a RATE_MISMATCH exception where the invoice GST rate of 5% does not align with the 18% rate reported in the return."
+    },
+    {
+      "invoice_id": "INV00030",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00030",
+        "date": "2024-04-03",
+        "hsn_code": "8473",
+        "taxable_amount": "87993.47",
+        "gst_rate": "18",
+        "gst_amount": "15838.82",
+        "vendor_id": "V005"
+      },
+      "return_data": {
+        "invoice_id": "INV00030",
+        "date": "2024-04-03",
+        "hsn_code": "8473",
+        "taxable_amount": "87993.47",
+        "gst_rate": "18",
+        "gst_amount": "15838.82",
+        "vendor_id": "V005",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00031",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00031",
+        "date": "2024-05-01",
+        "hsn_code": "8471",
+        "taxable_amount": "87922.95",
+        "gst_rate": "12",
+        "gst_amount": "10550.75",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00031",
+        "date": "2024-05-01",
+        "hsn_code": "8471",
+        "taxable_amount": "87922.95",
+        "gst_rate": "12",
+        "gst_amount": "10550.75",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00032",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00032",
+        "date": "2024-04-11",
+        "hsn_code": "8421",
+        "taxable_amount": "97820.46",
+        "gst_rate": "5",
+        "gst_amount": "4891.02",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00032",
+        "date": "2024-04-11",
+        "hsn_code": "8421",
+        "taxable_amount": "97820.46",
+        "gst_rate": "5",
+        "gst_amount": "4891.02",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00033",
+      "reason_code": "HSN_MISMATCH",
+      "confidence": "LOW",
+      "metadata": {
+        "expected_hsn": "8517",
+        "returned_hsn": "8473"
+      },
+      "invoice_data": {
+        "invoice_id": "INV00033",
+        "date": "2024-04-17",
+        "hsn_code": "8517",
+        "taxable_amount": "94738.02",
+        "gst_rate": "28",
+        "gst_amount": "26526.65",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "INV00033",
+        "date": "2024-04-17",
+        "hsn_code": "8473",
+        "taxable_amount": "94738.02",
+        "gst_rate": "28",
+        "gst_amount": "26526.65",
+        "vendor_id": "V003",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": "8517.0"
+      },
+      "llm_explanation": "Invoice INV00033 exhibits an HSN_MISMATCH where the invoice lists HSN code 8517, whereas the return reflects HSN code 8473."
+    },
+    {
+      "invoice_id": "INV00034",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00034",
+        "date": "2024-05-04",
+        "hsn_code": "9018",
+        "taxable_amount": "96471.93",
+        "gst_rate": "28",
+        "gst_amount": "27012.14",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00034",
+        "date": "2024-05-04",
+        "hsn_code": "9018",
+        "taxable_amount": "96471.93",
+        "gst_rate": "28",
+        "gst_amount": "27012.14",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00035",
+      "reason_code": "DUPLICATE_ENTRY",
+      "confidence": "LOW",
+      "metadata": {
+        "occurrences": 2
+      },
+      "invoice_data": {
+        "invoice_id": "INV00035",
+        "date": "2024-06-28",
+        "hsn_code": "8528",
+        "taxable_amount": "40500.24",
+        "gst_rate": "18",
+        "gst_amount": "7290.04",
+        "vendor_id": "V006"
+      },
+      "return_data": {
+        "invoice_id": "INV00035",
+        "date": "2024-06-28",
+        "hsn_code": "8528",
+        "taxable_amount": "40500.24",
+        "gst_rate": "18",
+        "gst_amount": "7290.04",
+        "vendor_id": "V006",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00035 is flagged as a DUPLICATE_ENTRY because it appears 2 times in the return."
+    },
+    {
+      "invoice_id": "INV00036",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00036",
+        "date": "2024-05-27",
+        "hsn_code": "9018",
+        "taxable_amount": "12979.42",
+        "gst_rate": "28",
+        "gst_amount": "3634.24",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00036",
+        "date": "2024-05-27",
+        "hsn_code": "9018",
+        "taxable_amount": "12979.42",
+        "gst_rate": "28",
+        "gst_amount": "3634.24",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00037",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00037",
+        "date": "2024-04-09",
+        "hsn_code": "8507",
+        "taxable_amount": "59242.56",
+        "gst_rate": "5",
+        "gst_amount": "2962.13",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00037",
+        "date": "2024-04-09",
+        "hsn_code": "8507",
+        "taxable_amount": "59242.56",
+        "gst_rate": "5",
+        "gst_amount": "2962.13",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00038",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00038",
+        "date": "2024-06-15",
+        "hsn_code": "8528",
+        "taxable_amount": "8028.32",
+        "gst_rate": "5",
+        "gst_amount": "401.42",
+        "vendor_id": "V001"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00038, with a taxable value of \u20b98028.32 and 5% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00039",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00039",
+        "date": "2024-04-30",
+        "hsn_code": "8473",
+        "taxable_amount": "86103.9",
+        "gst_rate": "5",
+        "gst_amount": "4305.19",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00039",
+        "date": "2024-04-30",
+        "hsn_code": "8473",
+        "taxable_amount": "86103.9",
+        "gst_rate": "5",
+        "gst_amount": "4305.19",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00040",
+      "reason_code": "DUPLICATE_ENTRY",
+      "confidence": "LOW",
+      "metadata": {
+        "occurrences": 2
+      },
+      "invoice_data": {
+        "invoice_id": "INV00040",
+        "date": "2024-06-05",
+        "hsn_code": "8528",
+        "taxable_amount": "67228.8",
+        "gst_rate": "18",
+        "gst_amount": "12101.18",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00040",
+        "date": "2024-06-05",
+        "hsn_code": "8528",
+        "taxable_amount": "67228.81",
+        "gst_rate": "18",
+        "gst_amount": "12101.18",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00040 is flagged as a DUPLICATE_ENTRY because it appears 2 times in the return."
+    },
+    {
+      "invoice_id": "INV00041",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00041",
+        "date": "2024-06-09",
+        "hsn_code": "8517",
+        "taxable_amount": "25056.73",
+        "gst_rate": "28",
+        "gst_amount": "7015.88",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00041",
+        "date": "2024-06-09",
+        "hsn_code": "8517",
+        "taxable_amount": "25056.73",
+        "gst_rate": "28",
+        "gst_amount": "7015.88",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00042",
+      "reason_code": "MATCHED_WITH_VARIANCE",
+      "confidence": "LOW",
+      "metadata": {
+        "variances": [
+          {
+            "field": "taxable_amount",
+            "expected": 10596.15,
+            "returned": 10600.15,
+            "delta": 4.0
+          }
+        ]
+      },
+      "invoice_data": {
+        "invoice_id": "INV00042",
+        "date": "2024-05-23",
+        "hsn_code": "8528",
+        "taxable_amount": "10596.15",
+        "gst_rate": "5",
+        "gst_amount": "529.81",
+        "vendor_id": "V007"
+      },
+      "return_data": {
+        "invoice_id": "INV00042",
+        "date": "2024-05-23",
+        "hsn_code": "8528",
+        "taxable_amount": "10600.15",
+        "gst_rate": "5",
+        "gst_amount": "529.81",
+        "vendor_id": "V007",
+        "original_value": "10596.15",
+        "difference": "4.0",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      },
+      "llm_explanation": "Invoice INV00042 is flagged as MATCHED_WITH_VARIANCE due to a \u20b94.00 discrepancy in the taxable amount, where the invoice records \u20b910596.15 against the return's \u20b910600.15."
+    },
+    {
+      "invoice_id": "INV00043",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00043",
+        "date": "2024-05-16",
+        "hsn_code": "8419",
+        "taxable_amount": "47235.44",
+        "gst_rate": "28",
+        "gst_amount": "13225.92",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "INV00043",
+        "date": "2024-05-16",
+        "hsn_code": "8419",
+        "taxable_amount": "47235.44",
+        "gst_rate": "28",
+        "gst_amount": "13225.92",
+        "vendor_id": "V001",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00044",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00044",
+        "date": "2024-06-26",
+        "hsn_code": "8473",
+        "taxable_amount": "40859.51",
+        "gst_rate": "5",
+        "gst_amount": "2042.98",
+        "vendor_id": "V006"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00044, with a taxable value of \u20b940859.51 and 5% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00045",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00045",
+        "date": "2024-04-14",
+        "hsn_code": "8528",
+        "taxable_amount": "19830.68",
+        "gst_rate": "12",
+        "gst_amount": "2379.68",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00045",
+        "date": "2024-04-14",
+        "hsn_code": "8528",
+        "taxable_amount": "19830.68",
+        "gst_rate": "12",
+        "gst_amount": "2379.68",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00046",
+      "reason_code": "MISSING_IN_RETURNS",
+      "confidence": "LOW",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00046",
+        "date": "2024-04-18",
+        "hsn_code": "8419",
+        "taxable_amount": "28575.97",
+        "gst_rate": "12",
+        "gst_amount": "3429.12",
+        "vendor_id": "V004"
+      },
+      "return_data": null,
+      "llm_explanation": "Invoice INV00046, with a taxable value of \u20b928575.97 and 12% GST, is flagged as MISSING_IN_RETURNS because it does not appear in the filed GST return."
+    },
+    {
+      "invoice_id": "INV00047",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00047",
+        "date": "2024-04-10",
+        "hsn_code": "8421",
+        "taxable_amount": "6008.24",
+        "gst_rate": "5",
+        "gst_amount": "300.41",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00047",
+        "date": "2024-04-10",
+        "hsn_code": "8421",
+        "taxable_amount": "6008.24",
+        "gst_rate": "5",
+        "gst_amount": "300.41",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00048",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00048",
+        "date": "2024-04-02",
+        "hsn_code": "8473",
+        "taxable_amount": "17464.8",
+        "gst_rate": "12",
+        "gst_amount": "2095.78",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00048",
+        "date": "2024-04-02",
+        "hsn_code": "8473",
+        "taxable_amount": "17464.8",
+        "gst_rate": "12",
+        "gst_amount": "2095.78",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00049",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00049",
+        "date": "2024-06-01",
+        "hsn_code": "8528",
+        "taxable_amount": "90341.84",
+        "gst_rate": "28",
+        "gst_amount": "25295.72",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "INV00049",
+        "date": "2024-06-01",
+        "hsn_code": "8528",
+        "taxable_amount": "90341.84",
+        "gst_rate": "28",
+        "gst_amount": "25295.72",
+        "vendor_id": "V003",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00050",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00050",
+        "date": "2024-05-19",
+        "hsn_code": "8471",
+        "taxable_amount": "27255.1",
+        "gst_rate": "28",
+        "gst_amount": "7631.43",
+        "vendor_id": "V008"
+      },
+      "return_data": {
+        "invoice_id": "INV00050",
+        "date": "2024-05-19",
+        "hsn_code": "8471",
+        "taxable_amount": "27255.1",
+        "gst_rate": "28",
+        "gst_amount": "7631.43",
+        "vendor_id": "V008",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00051",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00051",
+        "date": "2024-05-07",
+        "hsn_code": "8419",
+        "taxable_amount": "16324.89",
+        "gst_rate": "28",
+        "gst_amount": "4570.97",
+        "vendor_id": "V005"
+      },
+      "return_data": {
+        "invoice_id": "INV00051",
+        "date": "2024-05-07",
+        "hsn_code": "8419",
+        "taxable_amount": "16324.89",
+        "gst_rate": "28",
+        "gst_amount": "4570.97",
+        "vendor_id": "V005",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00052",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00052",
+        "date": "2024-04-28",
+        "hsn_code": "8471",
+        "taxable_amount": "75049.58",
+        "gst_rate": "5",
+        "gst_amount": "3752.48",
+        "vendor_id": "V001"
+      },
+      "return_data": {
+        "invoice_id": "INV00052",
+        "date": "2024-04-28",
+        "hsn_code": "8471",
+        "taxable_amount": "75049.58",
+        "gst_rate": "5",
+        "gst_amount": "3752.48",
+        "vendor_id": "V001",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00053",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00053",
+        "date": "2024-04-07",
+        "hsn_code": "9027",
+        "taxable_amount": "50782.19",
+        "gst_rate": "28",
+        "gst_amount": "14219.01",
+        "vendor_id": "V009"
+      },
+      "return_data": {
+        "invoice_id": "INV00053",
+        "date": "2024-04-07",
+        "hsn_code": "9027",
+        "taxable_amount": "50782.19",
+        "gst_rate": "28",
+        "gst_amount": "14219.01",
+        "vendor_id": "V009",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00054",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00054",
+        "date": "2024-04-21",
+        "hsn_code": "8471",
+        "taxable_amount": "85282.91",
+        "gst_rate": "5",
+        "gst_amount": "4264.15",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00054",
+        "date": "2024-04-21",
+        "hsn_code": "8471",
+        "taxable_amount": "85282.91",
+        "gst_rate": "5",
+        "gst_amount": "4264.15",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00055",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00055",
+        "date": "2024-06-16",
+        "hsn_code": "8473",
+        "taxable_amount": "40973.78",
+        "gst_rate": "12",
+        "gst_amount": "4916.85",
+        "vendor_id": "V010"
+      },
+      "return_data": {
+        "invoice_id": "INV00055",
+        "date": "2024-06-16",
+        "hsn_code": "8473",
+        "taxable_amount": "40973.78",
+        "gst_rate": "12",
+        "gst_amount": "4916.85",
+        "vendor_id": "V010",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00056",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00056",
+        "date": "2024-05-02",
+        "hsn_code": "9027",
+        "taxable_amount": "62318.77",
+        "gst_rate": "5",
+        "gst_amount": "3115.94",
+        "vendor_id": "V007"
+      },
+      "return_data": {
+        "invoice_id": "INV00056",
+        "date": "2024-05-02",
+        "hsn_code": "9027",
+        "taxable_amount": "62318.77",
+        "gst_rate": "5",
+        "gst_amount": "3115.94",
+        "vendor_id": "V007",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00057",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00057",
+        "date": "2024-06-24",
+        "hsn_code": "9027",
+        "taxable_amount": "93535.92",
+        "gst_rate": "18",
+        "gst_amount": "16836.47",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00057",
+        "date": "2024-06-24",
+        "hsn_code": "9027",
+        "taxable_amount": "93535.92",
+        "gst_rate": "18",
+        "gst_amount": "16836.47",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00058",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00058",
+        "date": "2024-06-25",
+        "hsn_code": "8507",
+        "taxable_amount": "27295.84",
+        "gst_rate": "12",
+        "gst_amount": "3275.5",
+        "vendor_id": "V003"
+      },
+      "return_data": {
+        "invoice_id": "INV00058",
+        "date": "2024-06-25",
+        "hsn_code": "8507",
+        "taxable_amount": "27295.84",
+        "gst_rate": "12",
+        "gst_amount": "3275.5",
+        "vendor_id": "V003",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00059",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00059",
+        "date": "2024-06-25",
+        "hsn_code": "8504",
+        "taxable_amount": "32301.54",
+        "gst_rate": "28",
+        "gst_amount": "9044.43",
+        "vendor_id": "V002"
+      },
+      "return_data": {
+        "invoice_id": "INV00059",
+        "date": "2024-06-25",
+        "hsn_code": "8504",
+        "taxable_amount": "32301.54",
+        "gst_rate": "28",
+        "gst_amount": "9044.43",
+        "vendor_id": "V002",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    },
+    {
+      "invoice_id": "INV00060",
+      "reason_code": "MATCHED",
+      "confidence": "HIGH",
+      "metadata": {},
+      "invoice_data": {
+        "invoice_id": "INV00060",
+        "date": "2024-04-02",
+        "hsn_code": "8421",
+        "taxable_amount": "8252.81",
+        "gst_rate": "5",
+        "gst_amount": "412.64",
+        "vendor_id": "V004"
+      },
+      "return_data": {
+        "invoice_id": "INV00060",
+        "date": "2024-04-02",
+        "hsn_code": "8421",
+        "taxable_amount": "8252.81",
+        "gst_rate": "5",
+        "gst_amount": "412.64",
+        "vendor_id": "V004",
+        "original_value": "",
+        "difference": "",
+        "original_gst_rate": "",
+        "original_hsn": ""
+      }
+    }
+  ]
+}

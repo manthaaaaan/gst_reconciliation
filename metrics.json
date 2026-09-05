@@ -1,0 +1,14 @@
+{
+  "total_records": 60,
+  "match_rate_pct": 75.0,
+  "processing_time_ms": 3.42,
+  "reason_code_counts": {
+    "MATCHED": 42,
+    "DUPLICATE_ENTRY": 3,
+    "MISSING_IN_RETURNS": 8,
+    "MATCHED_WITH_VARIANCE": 3,
+    "HSN_MISMATCH": 2,
+    "RATE_MISMATCH": 2
+  },
+  "accuracy_pct": 90.0
+}

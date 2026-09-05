@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  # ============================================================================
+  # Backend: FastAPI Reconciliation Engine (Python 3.11 + SQLite + Uvicorn)
+  # ============================================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: razorpay-audit-backend:latest
+    container_name: razorpay_audit_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Razorpay Audit Engine
+      - APP_ENV=production
+      - PORT=8000
+      - DATABASE_PATH=/app/data/audit_log.db
+      - LOG_LEVEL=info
+      - CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+    volumes:
+      # Persistent named volume for SQLite database and state storage
+      - sqlite_data:/app/data
+      # Log volume for audit trails and system logs
+      - backend_logs:/app/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || curl -fsS http://localhost:8000/docs || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - audit-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1024M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # ============================================================================
+  # Frontend: Next.js / React Reconciliation Dashboard (Node 20 Alpine)
+  # ============================================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: razorpay-audit-frontend:latest
+    container_name: razorpay_audit_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+      - BACKEND_INTERNAL_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:3000/ || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - audit-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.20'
+          memory: 128M
+
+# ==============================================================================
+# Storage Volumes (Persistent data layer for SQLite audit logs & metrics)
+# ==============================================================================
+volumes:
+  sqlite_data:
+    name: razorpay_audit_sqlite_data
+    driver: local
+  backend_logs:
+    name: razorpay_audit_backend_logs
+    driver: local
+
+# ==============================================================================
+# Isolated Bridge Network for Secure Inter-Service Communication
+# ==============================================================================
+networks:
+  audit-network:
+    name: razorpay_audit_network
+    driver: bridge
